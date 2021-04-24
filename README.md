@@ -21,6 +21,6 @@ You will need:
 
 TBD - I plan to toss a Fritzing wiring diagram onto this page at some point. In the mean time, reference the photo
 above for how to wire it up. (Note that the wire sticking out from under the ESP32 is connected to the 3.3v power pin.)
-Then open 7-segment-clock.ino with Arduino IDE, fill in the SSID and password of your WiFi network, connect your ESP32
+Then open 7-segment-clock.ino with Arduino IDE, install libraries ([TM1637](https://www.arduino.cc/reference/en/libraries/tm1637/), [acetime](https://www.arduino.cc/reference/en/libraries/acetime/) and [ESPNtpClient](https://github.com/gmag11/ESPNtpClient)), fill in the SSID and password of your WiFi network, connect your ESP32
 to your computer, program it, then hook it up to your phone charger and you're off to the races.
 
