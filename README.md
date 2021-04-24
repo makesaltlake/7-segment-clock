@@ -3,7 +3,7 @@
 This project contains the code and instructions needed to build a clock that uses a 7-segment display to show the time,
 keeps itself up to date, and automatically adjusts for daylight savings time.
 
-![](7-segment-clock.jpg | width=100)
+<img src="7-segment-clock.jpg" width="300"/>
 
 ## Supplies
 
