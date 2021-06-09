@@ -52,8 +52,12 @@ void loop() {
     uint8_t segments[] = {SEG_D, SEG_D | (isFirstHalfOfSecond ? 0b10000000 : 0), SEG_D, SEG_D};
     display.setSegments(segments);
   } else {
-    // It has, so show the time. (We show it in 12 hour format; if you want to show it in 24 hour format, remove the "% 12" two lines below.)
+    // It has, so show the time.
     auto currentTime = ace_time::ZonedDateTime::forUnixSeconds(currentMilliseconds / 1000L, timezone);
-    display.showNumberDecEx((currentTime.hour() % 12) * 100 + currentTime.minute(), isFirstHalfOfSecond ? 0b01000000 : 0, false, 4, 0);
+    auto hour = currentTime.hour() % 12;
+    if (hour == 0) {
+      hour = 12;
+    }
+    display.showNumberDecEx(hour * 100 + currentTime.minute(), isFirstHalfOfSecond ? 0b01000000 : 0, false, 4, 0);
   }
 }
